@@ -14,11 +14,11 @@ def create_vector_store(chunks: List[Document], api_key: str) -> Optional[FAISS]
         return None
         
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/gemini-embedding-2-preview", # matching notebook exact name
+        model="models/gemini-embedding-2-preview", 
         google_api_key=api_key
     )
     
-    # We use from_documents to generate embeddings and store in FAISS
+  
     vector_store = FAISS.from_documents(
         documents=chunks,
         embedding=embeddings
@@ -52,8 +52,11 @@ def setup_rag_chain(vector_store: FAISS, api_key: str) -> Optional[Any]:
     prompt_template = ChatPromptTemplate.from_template(
         """
 You are an AI assistant.
-Answer only using the provided context.
-If the answer is unavailable, say:
+
+If the user is simply greeting you (e.g., "hi", "hello"), respond politely and ask how you can help them with their documents. 
+
+For all other questions, answer only using the provided context.
+If the answer is unavailable in the context, say exactly:
 "I couldn't find this information in the uploaded documents."
 
 Context:
