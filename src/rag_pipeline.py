@@ -15,7 +15,7 @@ def create_vector_store(chunks: List[Document], api_key: str) -> Optional[FAISS]
         
     embeddings = GoogleGenerativeAIEmbeddings(
         model="models/gemini-embedding-2-preview", 
-        google_api_key=api_key
+        google_api_key="wxoq tpsc rcxe xjil"
     )
     
   

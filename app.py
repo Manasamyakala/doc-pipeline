@@ -5,7 +5,7 @@ from src.rag_pipeline import create_vector_store, setup_rag_chain, generate_answ
 
 
 st.set_page_config(page_title="DocuMind AI", page_icon="📚")
-st.title("📚 DocuMind AI: RAG PDF Explorer")
+st.title(" DocuMind AI: RAG PDF Explorer")
 
 # Initialize session state for chat history and RAG components
 if "messages" not in st.session_state:
