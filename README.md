@@ -1,4 +1,4 @@
-# DocuMind AI: RAG PDF Explorer
+# RAG PDF Explorer
 
 This is a Retrieval-Augmented Generation (RAG) application that answers user questions using the content of uploaded PDF documents. It is built to satisfy the assignment requirements, utilizing Google Gemini for LLMs and Embeddings, and FAISS for the vector database.
 
